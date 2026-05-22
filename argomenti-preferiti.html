@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Materie — Argomenti Preferiti" />
+  <title>Materie — Argomenti Preferiti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Merriweather:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-category">Materie</p>
+      <h1>Argomenti Preferiti</h1>
+      <p class="page-description">I miei argomenti preferiti delle varie discipline</p>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="pagineWeb">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Informatica</span>
+            <h2 class="section-title">Pagine Web</h2>
+            <p class="section-text">
+              Le pagine web sono i mattoni fondamentali della nostra esperienza quotidiana su Internet, configurandosi come documenti digitali ospitati su server remoti e interpretati dai browser dei nostri dispositivi attraverso il classico modello client-server. Quando digitiamo un indirizzo o clicchiamo su un collegamento, inviamo una richiesta che il server elabora, restituendo una combinazione di tecnologie essenziali che lavorano in perfetta sinergia per costruire ciò che vediamo sullo schermo. Alla base di tutto c'è l'HTML, che definisce l'architettura logica e lo scheletro dei contenuti, affiancato dal CSS, responsabile dell'estetica, dei colori e della capacità della pagina di adattarsi in modo responsive a diversi formati di schermo. A completare questo ecosistema interviene JavaScript, un vero e proprio linguaggio di programmazione lato client che infonde dinamismo all'interfaccia, gestendo animazioni, interazioni in tempo reale e logiche comportamentali senza la necessità di ricaricare continuamente la pagina.
+            </p>
+            <p class="section-text">Oltre alla loro struttura visiva, le pagine web si dividono in due grandi categorie in base al modo in cui gestiscono e distribuiscono le informazioni, distinguendosi in soluzioni statiche e dinamiche. Le pagine statiche offrono un contenuto fisso e identico per ogni visitatore, risultando estremamente veloci e leggere poiché richiedono semplicemente la lettura di file preesistenti sul server. Al contrario, le pagine dinamiche rappresentano il fulcro del web moderno, come i social network o le piattaforme di gestione, in cui il contenuto si evolve in tempo reale in base all'utente, all'orario o alle azioni eseguite. Questo processo avviene grazie all'intervento di linguaggi lato server e all'integrazione di database, che assemblano il codice HTML al volo per ogni singola sessione, permettendo di strutturare applicazioni web interattive, sicure e altamente personalizzate.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="pagina web.jpg" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-alt" id="sicurezza">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="vpn e firewall.png" alt="Secondo argomento preferito" />
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Sistemi e Reti</span>
+            <h2 class="section-title">Sicurezza dei sistemi informatici</h2>
+            <p class="section-text">
+              La sicurezza dei sistemi informatici è un processo dinamico e strutturato volto a proteggere l'infrastruttura tecnologica attraverso la salvaguardia di proprietà fondamentali racchiuse nella triade CIA, ovvero la riservatezza, che impedisce l'accesso non autorizzato tramite crittografia, l'integrità, che garantisce l'immutabilità dei dati con funzioni di hashing, e la disponibilità, che assicura l'accesso costante ai servizi. A queste si affiancano l'autenticità e il non-ripudio, essenziali per verificare l'identità degli utenti e blindare le transazioni. Per implementare una difesa logica, è necessario effettuare una preventiva valutazione dei rischi, un'analisi che quantifica formalmente il rischio moltiplicando la probabilità che una minaccia sfrutti una determinata vulnerabilità per l'impatto economico o operativo che ne deriverebbe. Questo bilanciamento consente di identificare e respingere le diverse tipologie di attacchi informatici, che variano dalle minacce passive come il Man-in-the-Middle, mirato all'intercettazione dei dati, agli attacchi attivi come il Denial of Service per saturare le risorse, fino allo spoofing di indirizzi IP o MAC e alle campagne di phishing volte a ingannare i nodi della rete.
+            </p>
+            <p class="section-text">Dalla teoria si passa poi all'azione pratica all'interno di ambienti di simulazione come Cisco Packet Tracer, dove queste contromisure prendono forma attraverso configurazioni mirate sui dispositivi di rete a livello Layer 2 e Layer 3. Per proteggere il livello di accesso da intrusioni fisiche o attacchi di tipo MAC flooding, si implementa la Port Security sulle interfacce dello switch, limitando il numero di indirizzi ammessi, istruendo la porta ad apprendere dinamicamente i dispositivi legittimi tramite la funzione sticky e impostando il blocco immediato in modalità shutdown in caso di violazione. Salendo di livello, la sicurezza viene gestita sui router tramite le Access Control List (ACL), utilizzate come filtri sequenziali per i pacchetti: le ACL standard analizzano solo l'IP sorgente e si applicano vicino alla destinazione, mentre le ACL estese permettono un filtraggio granulare basato su IP sorgente, destinazione, protocolli e porte logiche, bloccando ad esempio il traffico web verso server sensibili direttamente alla sorgente. Questo ecosistema di difesa viene infine completato dall'abilitazione del protocollo cifrato SSH al posto del vulnerabile Telnet per il management remoto del router, e dall'uso di interfacce passive nei protocolli di routing per impedire la diffusione non autorizzata delle rotte interne verso l'esterno.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="ingegneria">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">TPSIT</span>
+            <h2 class="section-title">Ingegneria del software</h2>
+            <p class="section-text">
+              L'ingegneria del software si configura come la disciplina metodologica che applica un approccio sistematico, controllato e quantificabile alla progettazione, allo sviluppo e alla manutenzione dei sistemi informatici, trasformando la scrittura del codice da attività artigianale a un processo ingegneristico rigoroso. L'obiettivo centrale non è semplicemente scrivere programmi funzionanti, ma garantire il soddisfacimento di stringenti attributi di qualità, tra cui spiccano l'affidabilità, la manutenibilità nel lungo periodo, l'efficienza algoritmica, la sicurezza e la scalabilità dell'architettura. Per orchestrare efficacemente la complessità di un progetto e mitigare i rischi di fallimento, la disciplina si affida al ciclo di vita del software (SDLC), un percorso strutturato che prende il via con l'analisi e l'ingegneria dei requisiti, fondamentali per mappare i bisogni funzionali e i vincoli tecnologici del committente. A questa fase segue il design strutturale e architettonico, in cui si definiscono i design pattern e le interazioni tra i moduli, per poi passare all'implementazione del codice, alle sessioni di testing per l'individuazione di bug e regressioni, e infine al deployment negli ambienti di produzione e alla successiva manutenzione correttiva ed evolutiva.
+            </p>
+            <p class="section-text">
+              Per tradurre questa struttura teorica in flussi di lavoro concreti, l'ingegneria del software adotta differenti metodologie di sviluppo, storicamente classificate in modelli predittivi e modelli adattivi. Il tradizionale modello a Cascata (Waterfall) incarna l'approccio predittivo sequenziale, in cui ogni fase logica inizia solo quando la precedente è formalmente conclusa; pur offrendo un'eccellente prevedibilità e una documentazione rigorosa utile nei sistemi con requisiti immutabili, mostra forti limiti di rigidità di fronte alle inevitabili variazioni in corso d'opera. Per rispondere a questa criticità, il panorama moderno adotta diffusamente le metodologie adattive guidate dal paradigma Agile e da framework come Scrum, che scompongono il progetto in cicli iterativi e incrementali di breve durata. Questo approccio flessibile favorisce il rilascio continuo di software funzionante, la collaborazione interfunzionale e una stretta sinergia con la cultura DevOps e le pratiche di automazione, come le pipeline di integrazione e distribuzione continua (CI/CD), garantendo la massima reattività ai cambiamenti del mercato e una costante ottimizzazione del valore del prodotto finale.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="Fasi-del-ciclo-di-vita-del-software-in-informatica.jpg" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-alt" id="ia">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="ia.jpg" alt="Secondo argomento preferito" />
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Intelligenza Artificiale</span>
+            <h2 class="section-title">Deep Learning</h2>
+            <p class="section-text">
+              Il Deep Learning rappresenta l'evoluzione avanzata dei sistemi di intelligenza artificiale, nato dall'esperienza del Multi-Layer Perceptron per dare vita a reti neurali profonde caratterizzate da un numero sempre maggiore di strati nascosti che processano le caratteristiche dei dati in modo strettamente gerarchico. Se originariamente l'analisi delle immagini risultava estremamente complessa a causa dell'elevata dimensionalità dello spazio delle feature indotta dai singoli pixel, la vera svolta epocale è avvenuta superando i limiti metodologici della computer vision classica. Quest'ultima si affidava infatti a una fase manuale di feature engineering strutturata su algoritmi dedicati, come SIFT o ORB, progettati per ricercare invarianze geometriche e isolare gradienti di luminosità, spigoli o forme da aggregare in vettori descrittori. Con l'introduzione delle Reti Neurali Convoluzionali (CNN), spinte al successo globale nel 2012 dalle straordinarie performance di AlexNet nella competizione ImageNet, l'intero paradigma si è trasformato in un apprendimento di tipo end-to-end: l'algoritmo non riceve più feature predefinite dall'operatore umano, ma impara in totale autonomia a selezionare, estrarre e strutturare la rappresentazione visiva ottimale direttamente dall'input grezzo, azzerando qualsiasi bias interpretativo esterno.
+            </p>
+            <p class="section-text">
+              Dal punto di vista strutturale, l'ecosistema di una CNN si articola alternando strati convoluzionali, che applicano filtri bidimensionali o matematici per evidenziare specifiche caratteristiche dei dati generando le cosiddette feature maps, a strati di pooling. Per contenere la complessità computazionale, gli strati convoluzionali sfruttano la connessione a campi recettivi locali e una rigida condivisione dei pesi (weight sharing), mentre il pooling – sia esso di tipo max o average – provvede a ridurre progressivamente la dimensionalità e l'informazione ridondante, conferendo al sistema una preziosa robustezza all'overfitting e un'efficace invarianza traslazionale. Completata l'estrazione gerarchica, un'operazione di appiattimento (flatten) normalizza i dati indirizzandoli verso un percettrone classico, dove la funzione Softmax distribuisce le probabilità finali per compiere attività di classificazione o regressione. L'addestramento di tali architetture, guidato dal meccanismo di error backpropagation, risulterebbe impraticabile senza il parallelismo massivo garantito dall'hardware moderno; per questo motivo, il Deep Learning è indissolubilmente legato all'uso di GPU programmabili tramite standard come Nvidia CUDA e di chip specifici come le TPU di Google, in grado di aggirare i tradizionali colli di bottiglia delle CPU. Infine, per mitigare gli ingenti costi economici e di calcolo, la disciplina fa largo uso del Transfer Learning e del Fine Tuning, adattando modelli complessi già addestrati su enormi dataset attraverso il congelamento dei pesi convoluzionali originari, pur rimanendo vigile di fronte alle evoluzioni delle reti antagoniste generative (GAN), capaci di dare vita a falsi realistici o di sferrare attacchi mirati a trarre in inganno i modelli alterando anche un solo pixel nei dati di input.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="matematica">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Matematica</span>
+            <h2 class="section-title">Calcolo combinatorio</h2>
+            <p class="section-text">
+              Il calcolo combinatorio studia le modalità per raggruppare, ordinare o selezionare gli elementi di un insieme finito secondo regole precise. Quando l'ordine con cui si dispongono gli oggetti è fondamentale per distinguere i raggruppamenti, si utilizzano le disposizioni e le permutazioni semplici, in cui nessun elemento si ripete. Le disposizioni semplici considerano i modi in cui si possono scegliere e ordinare $k$ elementi presi da un gruppo più grande di $n$ oggetti, e si calcolano moltiplicando i numeri interi decrescenti a partire da $n$ per $k$ fattori. Le permutazioni semplici rappresentano invece il caso particolare in cui si usano tutti gli $n$ oggetti disponibili ($k=n$), concentrandosi esclusivamente sul loro ordine di allineamento; il loro numero totale si ricava calcolando il fattoriale di $n$ ($n!$), ovvero il prodotto di tutti i numeri interi positivi da $n$ fino a uno.
+            </p>
+            <p class="section-text">
+              Al contrario, quando l'ordine degli elementi non ha alcuna importanza e conta solo quali oggetti sono stati scelti, si entra nel dominio delle combinazioni semplici. In questo caso, due raggruppamenti sono identici se contengono gli stessi elementi, a prescindere dalla sequenza con cui sono stati selezionati, come accade comunemente quando si distribuisce una mano di carte o si sceglie una squadra di lavoro. Matematica e formule riflettono questa logica dividendo il numero delle disposizioni per le permutazioni degli elementi scelti, azzerando così l'effetto dell'ordine interno; il risultato è espresso dal coefficiente binomiale $\binom{n}{k}$, un valore strutturale rintracciabile e fondamentale per il calcolo delle probabilità.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="calcolo combinatorio.png" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-alt" id="gpoi">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="busta-paga.jpg" alt="Secondo argomento preferito" />
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">GPOI</span>
+            <h2 class="section-title">CCNL e busta paga</h2>
+            <p class="section-text">
+              Il CCNL (Contratto Collettivo Nazionale di Lavoro) rappresenta l'accordo normativo stipulato periodicamente tra i sindacati dei lavoratori e le associazioni dei datori di lavoro per disciplinare i rapporti di impiego in un determinato settore produttivo. La sua funzione principale è quella di stabilire una base comune e inderogabile di diritti e doveri, garantendo tutele minime che i contratti individuali possono solo migliorare e mai peggiorare. Al suo interno vengono normati aspetti cruciali della vita lavorativa, come l'orario di lavoro settimanale, la maturazione di ferie e permessi, i periodi di prova e di preavviso, la gestione della malattia e l'inquadramento nei diversi livelli professionali. A ciascuno di questi livelli corrisponde una specifica paga base o minimo tabellare, che assicura una retribuzione proporzionata e sufficiente a parità di mansione svolta sull'intero territorio nazionale.
+            </p>
+            <p class="section-text">
+              La busta paga è il documento ufficiale che traduce mensilmente in termini economici le disposizioni del CCNL, formalizzando il calcolo della retribuzione spettante al lavoratore. La sua struttura si articola in tre macro-sezioni: la testa, il corpo centrale e il piede del cedolino. Nella parte alta vengono inseriti i dati anagrafici e la qualifica contrattuale, mentre il corpo centrale evidenzia la composizione dello stipendio lordo, sommando alla paga base elementi come gli scatti di anzianità, le indennità e le ore di straordinario. La sezione finale, o piede della busta paga, opera invece il passaggio fondamentale dal lordo al netto in tasca: da questo importo vengono infatti sottratte le trattenute previdenziali a carico del dipendente per l'INPS e le trattenute fiscali relative all'IRPEF e alle addizionali locali, mostrando infine il calcolo del trattamento di fine rapporto (TFR) accantonato e il netto da pagare.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="italiano">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Italiano</span>
+            <h2 class="section-title">Oscar Wilde</h2>
+            <p class="section-text">
+              Oscar Wilde incarna perfettamente la figura del dandy ottocentesco e il movimento dell'Estetismo britannico, una corrente artistica e letteraria guidata dal celebre principio dell'"arte per il gusto dell'arte" (art for art's sake). Questo movimento rifiutava categoricamente l'idea che la letteratura dovesse avere uno scopo didattico, morale o sociale, sostenendo invece che l'arte dovesse essere celebrata esclusivamente per la sua bellezza intrinseca e per la sua capacità di evocare sensazioni intense. Wilde, noto per il suo spirito arguto, i suoi aforismi fulminanti e uno stile di vita provocatorio che sfidava apertamente i rigidi e ipocriti canoni della società vittoriana, ha condensato questa intera filosofia nella celebre prefazione al suo unico romanzo. In queste pagine programmatiche, l'autore dichiara apertamente che non esistono libri morali o immorali, ma solo libri scritti bene o scritti male, ridefinendo il ruolo dell'artista come un puro creatore di cose belle, totalmente distaccato dal giudizio etico del mondo circostante.
+            </p>
+            <p class="section-text">
+              Il manifesto pratico di questa visione trova la sua massima espressione nel romanzo Il ritratto di Dorian Gray, un'opera incentrata sul mito faustiano della giovinezza eterna e sul dualismo tra l'apparenza esteriore e la corruzione interiore. La vicenda segue il giovane e bellissimo Dorian che, influenzato dalle teorie edonistiche del cinico Lord Henry Wotton, esprime il desiderio che un suo ritratto, dipinto dall'artista Basil Hallward, invecchi e mostri i segni del tempo al posto suo. Mentre Dorian si abbandona a una vita dissoluta, crudele e priva di rimorsi, il suo volto reale rimane inspiegabilmente radioso, immacolato e specchio di un'eterna purezza, mentre la tela, nascosta in soffitta, si deforma progressivamente, accumulando ogni singola ruga, cicatrice e mostruosità morale derivante dai suoi peccati. Questo sdoppiamento si risolve drammaticamente nel finale quando Dorian, colto dal rimorso e dall'orrore per la propria anima, trafigge il quadro con un pugnale: l'incantesimo si rompe istantaneamente, restituendo alla tela la sua originaria, splendida bellezza e condannando il protagonista a morire sul pavimento, precocemente invecchiato e reso irriconoscibile dai segni della sua reale degradazione.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="featured-famous-bi-oscar-wilde.jpeg" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-alt" id="storia">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="59-la-belle-epoque.jpg" alt="Secondo argomento preferito" />
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Storia</span>
+            <h2 class="section-title">La Belle époque</h2>
+            <p class="section-text">
+              La Belle Époque definisce quel radioso periodo della storia europea che spazia dalla fine dell'Ottocento fino allo scoppio della Prima Guerra Mondiale nel 1914, un'era caratterizzata da una diffusa fiducia nel progresso, da una stabilità politica senza precedenti tra le grandi potenze e da uno straordinario sviluppo economico. Questo clima di ottimismo era alimentato dalle strabilianti innovazioni della Seconda Rivoluzione Industriale: l'avvento dell'elettricità che illuminava le notti cittadine, il motore a scoppio, il telefono e i primi aeroplani davano l'illusione che la scienza potesse risolvere qualsiasi problema umano, sconfiggendo malattie e miseria. Parallelamente, nelle grandi metropoli come Parigi, centro nevralgico della vita culturale, nasceva la moderna società dei consumi e del tempo libero, celebrata nei caffè-concerto, nei teatri e attraverso le affascinanti architetture in ferro e vetro dei padiglioni delle Grandi Esposizioni Universali, che esaltavano visivamente il trionfo della modernità.
+            </p>
+            <p class="section-text">
+              Tuttavia, dietro questa facciata scintillante di benessere, spensieratezza e fioritura artistica, l'Europa della Belle Époque nascondeva profonde e drammatiche tensioni strutturali che avrebbero presto condotto al collasso dell'intero sistema. Il benessere economico e lo stile di vita borghese rimanevano infatti un privilegio d'élite, accentuando il divario sociale con una classe operaia sempre più sfruttata e conflittuale, mentre lo sviluppo industriale esasperava la competizione economica tra gli Stati. Questa rivalità si traduceva all'esterno in un aggressivo imperialismo coloniale, volto alla conquista di nuovi mercati in Africa e Asia, e all'interno in una pericolosa corsa agli armamenti sostenuta da un nazionalismo acceso e militarista. L'apparente equilibrio geopolitico si reggeva così su un fragile sistema di alleanze contrapposte che trasformò la scintillante Europa dei primi del Novecento in una vera e propria polveriera, pronta a esplodere tragicamente nell'estate del 1914.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="inglese">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">English</span>
+            <h2 class="section-title">Giants of IT</h2>
+            <p class="section-text">
+              Alan Turing and Steve Jobs were two visionary figures who fundamentally shaped the trajectory of modern computing, representing respectively the theoretical dawn and the consumer revolution of the digital age. Turing, a brilliant British mathematician, laid the foundational principles of computer science in 1936 by conceptualizing the Universal Turing Machine, a theoretical device capable of performing any computation through formal instructions. During World War II, his pioneering work at Bletchley Park led to breaking the German Enigma code, an achievement that saved millions of lives and birthed early electromechanical computing, while his later philosophical inquiries introduced the Turing Test, establishing the bedrock for Artificial Intelligence. Decades later, Steve Jobs transformed these abstract computational capabilities into intuitive, mass-market realities by co-founding Apple. Driven by a philosophy that fused technological power with minimalist design and human aesthetics, Jobs championed the democratization of technology, shifting computers from corporate basements into everyday homes and pockets through iconic products like the Macintosh, the iPhone, and the iPad.
+            </p>
+            <p class="section-text">
+              The physical infrastructure that enabled this digital ubiquity was born from military and academic experiments that eventually evolved into the modern internet, e-commerce, and a cashless global economy. The journey began in 1969 with ARPANET, a decentralized network created by the US Department of Defense designed to survive partial destruction through packet-switching technology, which later expanded globally following Tim Berners-Lee’s invention of the World Wide Web in 1989. This interconnected infrastructure triggered an economic revolution, giving rise to e-commerce platforms and digital payment ecosystems that are rapidly steering global markets toward a cashless society. While this borderless network offers immense convenience, it also exposes users to critical digital vulnerabilities, requiring rigorous cybersecurity practices to navigate the internet safely. To safeguard personal data and mitigate active threats, users must employ robust defense mechanisms, such as enforcing multi-factor authentication (MFA), utilizing end-to-end encrypted communication channels, avoiding phishing traps, and ensuring strict adherence to secure network protocols like HTTPS.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="Steve_Jobs_Headshot_2010-CROP.jpg" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-alt" id="scienzemotorie">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="basket mateira.jpg" alt="Secondo argomento preferito" />
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Scienze motorie</span>
+            <h2 class="section-title">Pallacanestro</h2>
+            <p class="section-text">
+              La pallacanestro, nata nel 1891 negli Stati Uniti grazie all'intuizione del dottor James Naismith, è uno sport di squadra dinamico e ad alta intensità che vede contrapposte due formazioni di cinque giocatori ciascuna su un terreno di gioco rettangolare. L'obiettivo fondamentale è spingere la palla all'interno del canestro avversario, posizionato a un'altezza strutturale di 3,05 metri, rispettando rigide regole di movimento che vietano di camminare con la palla in mano senza palleggiare o di riprendere il palleggio dopo averlo interrotto. I punti vengono assegnati in base alla distanza del tiro: i canestri realizzati durante l'azione valgono due punti, che diventano tre se scagliati al di fuori della linea dell'arco dei tre punti, mentre i tiri liberi, concessi a seguito di un fallo subito, valgono un singolo punto. La gestione del tempo è cruciale, poiché le squadre hanno a disposizione un limite massimo di 24 secondi per tentare una conclusione a canestro, forzando un ritmo di gioco frenetico e spettacolari transizioni offensive.
+            </p>
+            <p class="section-text">
+              Sul piano tattico e strutturale, le dinamiche di squadra si articolano attorno a cinque ruoli tradizionali ben definiti, ciascuno con compiti specifici sia nella fase di possesso sia in quella di ripiegamento difensivo. Il Playmaker (passatore e regista) organizza gli schemi d'attacco ed esegue la transizione, supportato dalla Guardia tiratrice, specializzata nelle conclusioni dalla lunga distanza, e dall'Ala piccola, un giocatore versatile capace di penetrare l'area avversaria. Sotto canestro dominano invece l'Ala grande e il Centro (o pivot), atleti dotati di imponente stazza fisica essenziali per la conquista dei rimbalzi, la protezione del tabellone e le stoppate sui tiri avversari. Questa solida intelaiatura di posizioni si esprime ai massimi livelli mondiali nel campionato della NBA statunitense e, in ambito nazionale, è regolata dalla Federazione Italiana Pallacanestro, che coordina i campionati professionistici stimolando una profonda cultura sportiva basata su strategie di difesa a uomo o a zona e su schemi d'attacco altamente sofisticati.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section bg-white" id="religione">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <!-- Testo (colonna sinistra) -->
+        <div class="col-lg-6 fade-in">
+          <div class="section-text-block">
+            <span class="section-badge">Religione</span>
+            <h2 class="section-title">Teoria della mente estesa</h2>
+            <p class="section-text">
+              La teoria della mente estesa (Extended Mind Thesis), introdotta dai filosofi Andy Clark e David Chalmers nel 1998, rivoluziona il concetto tradizionale di cognizione sostenendo che la mente umana non sia confinata entro i limiti biologici del cranio o della pelle. Secondo questa prospettiva anti-individualista, gli strumenti esterni e i supporti tecnologici non si limitano a facilitare il lavoro del cervello, ma diventano veri e propri costituenti fisici dei nostri processi cognitivi. Un esempio classico è quello del taccuino (o di uno smartphone moderno): se una persona affetta da deficit di memoria utilizza un'agenda per annotare e recuperare informazioni quotidiane, quell'oggetto svolge esattamente la stessa funzione biologica della memoria a lungo termine. La cognizione viene quindi ridefinita come un sistema accoppiato in cui il cervello, il corpo e l'ambiente esterno interagiscono in modo continuo e reciproco per realizzare il pensiero.
+            </p>
+            <p class="section-text">
+              Per determinare se un elemento esterno possa essere considerato a tutti gli effetti parte integrante della mente, Clark e Chalmers hanno stabilito i cosiddetti "criteri di parità" (Parity Principle). Un dispositivo o un supporto ambientale viene integrato nel sistema cognitivo se il suo utilizzo è costante e affidabile, se le informazioni che contiene sono accessibili in modo immediato e trasparente senza esitazioni, e se tali dati vengono convalidati automaticamente come credenze personali, proprio come faremmo con i nostri ricordi biologici. Questa teoria sposta radicalmente il baricentro dell'ingegneria del software e del design delle interfacce: i computer, i motori di ricerca e i dispositivi digitali non sono più semplici canali di comunicazione o contenitori di dati separati da noi, ma estensioni attive dei nostri circuiti neurali, in grado di ridefinire i confini materiali dell'intelligenza umana.
+            </p>
+          </div>
+        </div>
+        <!-- Immagine (colonna destra) — Sostituisci src con la tua foto/immagine -->
+        <div class="col-lg-6 fade-in">
+          <div class="section-image-wrapper">
+            <img class="section-image" src="mente estesa.jpg" alt="Il mio argomento preferito" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

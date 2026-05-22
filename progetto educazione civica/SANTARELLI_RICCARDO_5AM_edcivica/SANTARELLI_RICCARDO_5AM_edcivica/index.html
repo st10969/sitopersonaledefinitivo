@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBlog - Percorso Multidisciplinare</title>
+    
+    <!-- Tailwind CSS CDN (Fondamentale per far vedere la grafica) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Collegamento al tuo CSS locale -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Collegamento al tuo JS locale (con defer per caricare dopo il DOM) -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900 selection:bg-blue-100">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center cursor-pointer group" onclick="showSection('index')">
+                    <div class="bg-blue-600 text-white p-2 rounded-xl group-hover:rotate-6 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <span class="ml-3 text-2xl font-bold tracking-tight text-gray-900 blog-title">Riccardo Santarelli</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-6 text-sm font-semibold uppercase tracking-wider text-gray-600">
+                    <button onclick="showSection('index')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-index">Home</button>
+                    <button onclick="showSection('religione')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-religione">Religione</button>
+                    <button onclick="showSection('inglese')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-inglese">Inglese</button>
+                    <button onclick="showSection('storia')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-storia">Storia</button>
+                    <button onclick="showSection('italiano')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-italiano">Italiano</button>
+                    <button onclick="showSection('scienze-motorie')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-scienze-motorie">Scienze motorie</button>
+                    <div class="h-6 w-px bg-gray-200 self-center"></div>
+                    <button onclick="showSection('sistemi')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-sistemi">Sistemi</button>
+                    <button onclick="showSection('GPOI')" class="nav-link px-2 py-1 hover:text-blue-600" id="link-GPOI">GPOI</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <!-- SEZIONE HOME (INDEX) -->
+        <div id="section-index" class="section-content fade-in">
+            <header class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6 blog-title">L'etica del tech - Progetto multidisciplinare</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Un'esplorazione multidisciplinare tra etica, storia, letteratura e sicurezza digitale</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card Religione -->
+                <div onclick="showSection('religione')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-purple-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 21l-8-4.5v-9L12 3l8 4.5v9z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-purple-600 uppercase tracking-widest">Religione cattolica</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">La Cultura della Pace</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">Analisi della pace come frutto della giustizia e il ruolo delle istituzioni educative.</p>
+                    </div>
+                </div>
+
+                <!-- Card Inglese -->
+                <div onclick="showSection('inglese')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-red-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-red-600 uppercase tracking-widest">Lingua inglese</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Victorian Shadows</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">Oliver Twist and the dark reality of Workhouses in 19th century Britain.</p>
+                    </div>
+                </div>
+
+                <!-- Card storia -->
+                <div onclick="showSection('storia')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">I dati nel corso della storia</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Storia</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">Dai dati cartacei al cloud: l'evoluzione dei sistemi di gestione delle informazioni.</p>
+                    </div>
+                </div>
+
+                <!-- Card italiano -->
+                <div onclick="showSection('italiano')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Le "buone maniere" nella comunicazione</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Italiano</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">La comunicazione efficace richiede rispetto, chiarezza e sensibilità alle esigenze degli altri.</p>
+                    </div>
+                </div>
+
+                <!-- Card scienze motorie -->
+                <div onclick="showSection('scienze-motorie')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Scienze Motorie</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Scienze Motorie</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">L'educazione fisica e lo sviluppo delle capacità motorie sono fondamentali per il benessere degli studenti.</p>
+                    </div>
+                </div>
+
+                <!-- Card Sistemi -->
+                <div onclick="showSection('sistemi')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Sistemi e reti</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Sicurezza dei Dati</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">Tutta la cybersicurezza dietro ai dati di tutti i giorni</p>
+                    </div>
+                </div>
+
+                <!-- Card GPOI -->
+                <div onclick="showSection('GPOI')" class="article-card bg-white rounded-3xl overflow-hidden border border-gray-100 cursor-pointer group">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">GPOI</span>
+                        <h3 class="text-2xl font-bold mt-2 group-hover:text-blue-600 transition-colors">Gestione dei Dati</h3>
+                        <p class="mt-3 text-gray-500 line-clamp-3">Normative GDPR: proteggere l'identità dei dati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section-religione" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-blue-600 font-bold uppercase text-sm tracking-widest">Religione Cattolica</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">La Giustizia come Fondamento della Pace</h1>
+                <div class="content-body">
+                    
+                    <h2>Il tema della pace secondo la giustizia</h2>
+                    <p>La pace non è una condizione di immobilità o la semplice assenza di conflitti, ma un processo dinamico e vitale che si fonda sulla giustizia e sull'ordine morale. Come sottolineato dal magistero di Paolo VI, essa non può sussistere senza il riconoscimento della dignità umana e un'equa ripartizione delle risorse, poiché le disuguaglianze sociali rappresentano tensioni invisibili pronte a esplodere. Una tregua che non affronta le cause profonde del malessere resta solo un silenzio apparente delle armi; la pace autentica richiede invece un impegno attivo nella costruzione di rapporti equi, trasformando lo sviluppo condiviso nell'unico vero antidoto alla guerra e nell'unico modo per tradurre il disegno divino in realtà sociale.</p>
+                    
+                    <h2>Integrazione europea come modello di pace</h2>
+                    <p>L'Europa sorta dalle macerie del secondo conflitto mondiale costituisce un esperimento senza precedenti nella storia, poiché ha sostituito la logica del dominio con quella della cooperazione istituzionalizzata. Il passaggio cruciale è stato comprendere che la pace non poteva basarsi solo su trattati diplomatici, ma doveva poggiare su basi materiali concrete: la messa in comune del carbone e dell'acciaio non fu solo una mossa economica, ma un atto politico volto a rendere la guerra non solo impensabile, ma materialmente impossibile. Questo miracolo politico ha dimostrato che la sovranità, se condivisa anziché difesa gelosamente, può diventare uno strumento di protezione reciproca e di benessere collettivo. In questo contesto, le frontiere hanno perso la loro funzione di linee di faglia belliche per trasformarsi in spazi di scambio, sostenuti dalla consapevolezza di un'eredità culturale comune che unisce i popoli al di là delle differenze linguistiche o nazionali. La solidarietà economica è diventata così il collante che tiene insieme nazioni un tempo nemiche, confermando che la pace è un'opera di ingegneria sociale che richiede visione, coraggio e la costante volontà di costruire ponti dove prima esistevano solo barriere.</p>
+                    
+                    <h2>Il ruolo della scuola per una mente pacifica</h2>
+                    <p>La scuola non è solo un luogo di trasmissione del sapere, ma una vera officina in cui si forgia la coscienza civica, assumendo un ruolo profetico nel delineare il futuro della società. Formare "artigiani di pace" significa spostare il baricentro dell'educazione dalla semplice memorizzazione degli eventi bellici alla comprensione profonda delle dinamiche umane che li precedono. Una "mente per la pace" si costruisce attraverso l'esercizio quotidiano dell'empatia, che permette di riconoscere nell'altro una soggettività pari alla propria, contrastando quei processi di astrazione e pregiudizio che storicamente portano alla disumanizzazione del nemico. L'ascolto attivo e la negoziazione diventano quindi competenze fondamentali, trasformando il conflitto da momento di rottura a opportunità di confronto e crescita. In questo senso, l'educazione alla non violenza non è un atteggiamento passivo, ma un'azione coraggiosa di decostruzione degli stereotipi, capace di disinnescare la logica della sopraffazione già tra i banchi di scuola. Solo attraverso questo costante lavoro di cesello sulle menti giovani è possibile trasformare la teoria della convivenza in una pratica vissuta, rendendo ogni studente un costruttore consapevole di un tessuto sociale più resiliente e umano.</p>
+                
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold hover:translate-x-[-5px] transition-transform">
+                    <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    Torna alla Home
+                </button>
+            </article>
+        </div>
+
+        <div id="section-scienze-motorie" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-red-600 font-bold uppercase text-sm tracking-widest">Scienze Motorie</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">La Tecnologia al Servizio dello Sport</h1>
+                <div class="content-body">
+                    <h2>La tecnologia al servizio dello sport</h2>
+                    <p>La tecnologia ha ridefinito i confini della prestazione sportiva, trasformando l'atleta in un ecosistema di dati analizzabili in tempo reale per massimizzare l'efficienza e ridurre i rischi. Attraverso la biomeccanica e l'analisi dei Big Data, ogni movimento viene scomposto e ottimizzato: nel calcio, ad esempio, i sistemi GPS integrati nelle maglie monitorano i carichi di lavoro e la frequenza cardiaca per prevenire lesioni muscolari da sovraccarico, mentre nel nuoto i sensori inerziali analizzano la fluidodinamica della bracciata per limare centesimi di secondo.I dispositivi indossabili hanno democratizzato l'eccellenza, permettendo anche ad atleti non professionisti di accedere a feedback biomeccanici un tempo riservati ai laboratori olimpici. Nel ciclismo, i misuratori di potenza permettono di gestire lo sforzo con precisione matematica su lunghe distanze, mentre nel tennis la sensoristica applicata alle racchette fornisce dati istantanei su rotazione della pallina e punto d'impatto, trasformando l'allenamento in un processo scientifico di correzione continua. Questa evoluzione non solo potenzia il risultato agonistico, ma tutela la salute dell'atleta, rendendo la tecnologia un ponte essenziale tra il limite biologico e la performance assoluta.</p>
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+        
+        <div id="section-inglese" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-red-600 font-bold uppercase text-sm tracking-widest">Lingua inglese</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">Shadows of the Victorian Era</h1>
+                <div class="content-body">
+                    
+                    <h2>Oliver Twist and Charles Dickens</h2>
+                    <p>Charles Dickens acted as a powerful advocate for the marginalized, using his prose to expose the brutal realities of Victorian England. In Oliver Twist, he delves into the grim shadows of a London transformed by the Industrial Revolution, where the relentless pursuit of progress often crushed the most vulnerable. Through Oliver, a figure of pure innocence, Dickens illustrates the harrowing struggles of the poor, forcing a mirror in front of a society that prioritized profit and institutional efficiency over human compassion. By depicting the indifference of the ruling classes and the systemic cruelty of the workhouse, Dickens transformed literature into a tool for social reform, ensuring that the plight of the "voiceless" could no longer be ignored by the public conscience.</p>
+                    
+                    <h2>The Cruelty of Workhouses</h2>
+                    <p>The Poor Law Amendment Act of 1834 represented a cold, bureaucratic approach to poverty, institutionalizing the Victorian belief that financial struggle was a moral failure. By establishing workhouses that were deliberately harsher than the lowest standard of independent living, the state sought to discourage "dependency" through systemic misery. Families were forcibly separated, and inmates were subjected to grueling, repetitive labor and a soul-crushing lack of dignity. Dickens used his narrative power to strip away the clinical justifications for these institutions, vividly portraying the starvation and psychological abuse hidden behind their walls. His work acted as a catalyst for social guilt, compelling the comfortable middle class to recognize that their industrial prosperity was built upon an inhumane system that treated the destitute not as citizens in need, but as a surplus to be managed with cruelty.</p>
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+
+        <div id="section-sistemi" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-indigo-600 font-bold uppercase text-sm tracking-widest">Sistemi e reti</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">Sicurezza dei dati</h1>
+                <div class="content-body">
+                    
+                    <h2>Principi di Cybersicurezza e Difesa</h2>
+                    <p>Nel panorama digitale contemporaneo, la difesa dei dati si impernia sulla triade CIA, un modello dove la riservatezza garantisce l'accesso alle sole persone autorizzate, l'integrità assicura che le informazioni non vengano alterate e la disponibilità ne permette l'uso costante. Per navigare in sicurezza, è fondamentale saper identificare minacce insidiose come il phishing, che sfrutta l'inganno psicologico per sottrarre credenziali, e i malware, software malevoli pronti a compromettere interi sistemi. La protezione efficace non è più un'opzione ma una necessità che si realizza attraverso strumenti robusti come la crittografia, che rende i dati illeggibili agli estranei, e l'autenticazione a più fattori, che aggiunge uno strato di verifica indispensabile oltre la semplice password. Comprendere questi pilastri trasforma l'utente da potenziale vittima a difensore attivo del proprio perimetro digitale, rendendo la sicurezza informatica un processo consapevole di gestione del rischio piuttosto che una semplice barriera tecnologica.</p>                                    
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+
+        <div id="section-storia" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-amber-600 font-bold uppercase text-sm tracking-widest">Storia e Comunicazione</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">Evoluzione dell'Informazione</h1>
+                <div class="content-body">
+                    
+                    <h2>Propaganda e Censura nel '900</h2>
+                    <p>Il ventesimo secolo ha trasformato la comunicazione di massa in un potente strumento di controllo sociale, dove la tecnologia è stata piegata alle esigenze dei regimi totalitari per plasmare le menti dei cittadini. Il fascismo e il nazismo hanno eccelso in questa manipolazione, elevando la propaganda a una vera e propria ingegneria del consenso che sfruttava la radio e il cinema per entrare capillarmente nella sfera privata delle persone. In Italia, il regime fascista utilizzò l'EIAR e il controllo ferreo sull'Istituto Luce per diffondere un'immagine eroica del Duce e della nazione, mentre in Germania il ministero guidato da Joseph Goebbels trasformò la radio in un feticcio domestico attraverso il "ricevitore del popolo", uno strumento economico progettato per trasmettere unicamente i discorsi del Führer e l'ideologia nazionalsocialista.  Questa occupazione dello spazio mediatico era accompagnata da una censura spietata che non si limitava a silenziare i giornali d'opposizione, ma mirava a eliminare fisicamente e intellettualmente ogni voce dissenziente attraverso roghi di libri e leggi repressive. In questo modo, la libertà di stampa veniva sostituita da una narrazione unica e totalizzante, capace di trasformare il cittadino in un ingranaggio della macchina statale e di rendere la propaganda un'arma non convenzionale, fondamentale quanto la forza militare per il mantenimento del potere assoluto.</p>
+                
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+
+        <div id="section-italiano" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-amber-600 font-bold uppercase text-sm tracking-widest">Italiano</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">Come si comunica in rete</h1>
+                <div class="content-body">
+                    
+                    <h2>Lessico della Rete e Netiquette</h2>
+                    <p>Nell'era dell'iperconnessione, la velocità del messaggio ha spesso sacrificato la forma, portando a una comunicazione estremamente informale e contratta. Tuttavia, questa immediatezza non deve essere confusa con una licenza di inciviltà: proprio perché le barriere digitali eliminano il contatto fisico e il tono della voce, la Netiquette emerge come un codice etico indispensabile per preservare il rispetto reciproco. Queste regole di buona educazione digitale non sono semplici formalismi, ma strumenti di difesa sociale che impediscono alla rete di degenerare in una arena di aggressività gratuita o in un terreno fertile per la disinformazione. Adottare una corretta Netiquette significa comprendere che dietro ogni schermo esiste una persona, che la verifica delle fonti è un dovere civico e che l'uso consapevole del linguaggio è l'unico modo per evitare che la libertà di parola si trasformi nel diritto all'offesa, garantendo così che lo spazio virtuale rimanga un luogo di reale scambio e non di isolamento ostile.</p>
+                
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+
+        <div id="section-GPOI" class="section-content hidden-section fade-in">
+            <article class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-3xl shadow-sm">
+                <span class="text-indigo-600 font-bold uppercase text-sm tracking-widest">Gestione Progetto e Organizzazione d'Impresa</span>
+                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-8">Normative GDPR</h1>
+                <div class="content-body">
+                    
+                    <h2>Privacy e Normative GDPR</h2>
+                    <p>L'analogia del dato come nuovo petrolio evidenzia il valore immenso delle informazioni nel mercato globale, ma solleva al contempo la necessità di una raffinazione etica e legale che ne impedisca lo sfruttamento selvaggio. In questo scenario, il GDPR (Regolamento Generale sulla Protezione dei Dati) si pone come lo scudo normativo fondamentale che restituisce all'utente la proprietà del proprio "oro digitale", trasformando il consenso da formalità a pilastro della privacy. Questa regolamentazione impone alle organizzazioni un cambio di paradigma basato sulla trasparenza radicale e sulla responsabilità, obbligandole a proteggere la riservatezza non solo come obbligo burocratico, ma come requisito strutturale del servizio offerto. Con la migrazione epocale dei dati dai server fisici locali all'architettura Cloud, il perimetro di difesa si è spostato in uno spazio virtuale più complesso, rendendo necessari standard di sicurezza sempre più sofisticati per garantire che la delocalizzazione delle informazioni non coincida con una perdita di controllo o di tutela. Il GDPR assicura quindi che, nonostante i dati risiedano in nuvole digitali spesso lontane geograficamente, il diritto fondamentale dell'individuo alla protezione della propria identità rimanga ancorato a certezze legali invalicabili, trasformando la sicurezza informatica nella nuova frontiera della libertà civile.</p>
+                
+                </div>
+                <button onclick="showSection('index')" class="mt-12 inline-flex items-center text-blue-600 font-bold">← Torna alla Home</button>
+            </article>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="text-right text-sm text-gray-500">
+                <p>© 2026 Progetto multidisciplinare - Educazione civica</p>
+                <p class="mt-1 italic">Riccardo Santarelli - 13/05/2026</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

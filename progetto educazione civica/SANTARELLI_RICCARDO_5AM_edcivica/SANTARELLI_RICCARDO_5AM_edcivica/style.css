@@ -1,0 +1,74 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.blog-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.article-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-section {
+    display: none;
+}
+
+/* Animazione per il caricamento dei contenuti */
+.fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stile per i contenuti degli articoli */
+.content-body p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #374151;
+    font-size: 1.1rem;
+}
+
+.content-body h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+    font-weight: 700;
+    font-size: 1.75rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
